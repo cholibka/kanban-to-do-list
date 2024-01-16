@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+.list-module {
+    margin-left: 2svw;
+    height: 95svh;
+    width: 32svw;
+    display: flex;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list-name {
+    font-size: larger;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-div {
+    display: flex;
+    flex-direction: row;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.options-div {
+    height: 5svh;
+    margin-top: 2svh;
+    display: flex;
+    justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.date-options {
+    padding-top: 2svh;
+    padding-left: 3svh;
+    vertical-align: middle;
+    display: inline-flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new-task:hover {
+    color: #ccccff;
+}
+
+.new-task {
+    background: none;
+    border: none;
+    color: black;
+    text-decoration: none;
+    display: inline-flex;
+    padding-top: 2svh;
+    padding-right: 3svh;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.new-task-text {
+    margin: 0;
+    margin-right: 3px;
+}
+
+.date-text {
+    margin: 0;
+}
+
+.text-line {
+    text-decoration: line-through;
+}
+
+.card-content-text {
+    margin-top: 1svh !important;
+}
+
+.card-content-assigment {
+    margin-left: auto;
+    vertical-align: middle;
+    display: inline-flex;
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-action-buttons {
+    margin-left: auto;
+}
+
+.card-assigment-text {
+    margin-top: 0 !important;
+    margin-left: 5px;
+}
+
+.card-done-text {
+    color: #808080;
+}
+
+.svg-done {
+    filter: invert(54%) sepia(0%) saturate(545%) hue-rotate(230deg)
+        brightness(92%) contrast(84%);
 }
