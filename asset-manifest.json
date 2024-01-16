@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/kanban-to-do-list/static/css/main.5d6e17c0.css",
+    "main.js": "/kanban-to-do-list/static/js/main.260b8d03.js",
+    "static/js/787.cb5ffd44.chunk.js": "/kanban-to-do-list/static/js/787.cb5ffd44.chunk.js",
+    "static/media/face.svg": "/kanban-to-do-list/static/media/face.3cd77ca6b109895bf6dc59535d47e022.svg",
+    "index.html": "/kanban-to-do-list/index.html",
+    "static/media/edit.svg": "/kanban-to-do-list/static/media/edit.2e7d3c445c6aafc7f6711a450cf9f4c3.svg",
+    "static/media/delete.svg": "/kanban-to-do-list/static/media/delete.aa222c2e064865074487d931f8eec184.svg",
+    "static/media/add.svg": "/kanban-to-do-list/static/media/add.3c7a39125c540df41c5d3866d872348b.svg",
+    "static/media/chevron-left.svg": "/kanban-to-do-list/static/media/chevron-left.756001fd0d53a6cc1c8a6f5a08347f5a.svg",
+    "static/media/chevron-right.svg": "/kanban-to-do-list/static/media/chevron-right.c65e28e226d1a322996d0fafe1cfe835.svg",
+    "main.5d6e17c0.css.map": "/kanban-to-do-list/static/css/main.5d6e17c0.css.map",
+    "main.260b8d03.js.map": "/kanban-to-do-list/static/js/main.260b8d03.js.map",
+    "787.cb5ffd44.chunk.js.map": "/kanban-to-do-list/static/js/787.cb5ffd44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d6e17c0.css",
+    "static/js/main.260b8d03.js"
+  ]
+}
