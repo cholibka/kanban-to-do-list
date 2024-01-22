@@ -32,20 +32,28 @@
     display: inline-flex;
 }
 
-.new-task:hover {
+.link-btn:hover {
     color: #ccccff;
 }
 
-.new-task {
+.link-btn {
     background: none;
     border: none;
     color: black;
     text-decoration: none;
     display: inline-flex;
+    cursor: -webkit-pointer;
+    cursor: pointer;
+}
+
+.task-btn {
     padding-top: 2svh;
     padding-right: 3svh;
-    cursor: -webkit-grab;
-    cursor: grab;
+}
+
+.card-btn {
+    padding-right: 0;
+    padding-left: 3px;
 }
 
 .new-task-text {

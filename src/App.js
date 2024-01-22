@@ -112,7 +112,7 @@ export default function App() {
                     <p className="date-text">{printDate()}</p>
                     <Right onClick={() => ChangeDate(1)} />
                 </div>
-                <button class="new-task">
+                <button class="link-btn task-btn">
                     <p className="new-task-text">Add new task</p>
                     <Add />
                 </button>

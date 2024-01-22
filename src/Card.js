@@ -13,8 +13,12 @@ export default function Card({ content, who, isDone }) {
                         : "card-action-buttons"
                 }
             >
-                <Edit />
-                <Delete />
+                <button className="link-btn card-btn">
+                    <Edit />
+                </button>
+                <button className="link-btn card-btn">
+                    <Delete />
+                </button>
             </div>
             <p
                 className={
