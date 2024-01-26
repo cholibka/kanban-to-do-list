@@ -5,7 +5,7 @@ import { ReactComponent as Edit } from "./assets/edit.svg";
 
 export default function Card({ content, who, isDone }) {
     return (
-        <div onRig className="card-item">
+        <div className="card-item">
             <div
                 className={
                     isDone

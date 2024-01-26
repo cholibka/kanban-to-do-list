@@ -12,12 +12,19 @@ import "./App.css";
 import { ReactComponent as Left } from "./assets/chevron-left.svg";
 import { ReactComponent as Right } from "./assets/chevron-right.svg";
 import { ReactComponent as Add } from "./assets/add.svg";
+import AddTask from "./modals/AddTask";
 
 export default function App() {
     const [toDo, setToDo] = useState(getItems(10));
     const [doing, setDoing] = useState(getItems(10, 10));
     const [done, setDone] = useState(getItems(10, 20));
     const [date, setDate] = useState(new Date());
+    const [isAddTaskOpen, setAddTaskOpen] = useState(false);
+    const [addTaskFormData, setAddTaskFormData] = useState({
+        name: "",
+        who: null,
+        date: null,
+    });
     const [startDate, setStartDate] = useState(
         new Date(
             new Date().setDate(date.getDate() - date.getDay() + 1)
@@ -104,15 +111,34 @@ export default function App() {
         return `${startDate} - ${endDate}`;
     };
 
+    const handleOpenAddTaskModal = () => {
+        setAddTaskOpen(true);
+    };
+
+    const handleCloseAddTaskModal = () => {
+        setAddTaskOpen(false);
+    };
+    const handleFormSubmit = (data) => {
+        setAddTaskFormData(data);
+        handleCloseAddTaskModal();
+    };
     return (
         <>
+            <AddTask
+                isOpen={isAddTaskOpen}
+                onSubmit={handleFormSubmit}
+                onClose={handleCloseAddTaskModal}
+            />
             <div className="options-div">
                 <div className="date-options">
                     <Left onClick={() => ChangeDate(-1)} />
                     <p className="date-text">{printDate()}</p>
                     <Right onClick={() => ChangeDate(1)} />
                 </div>
-                <button class="link-btn task-btn">
+                <button
+                    className="link-btn task-btn"
+                    onClick={handleOpenAddTaskModal}
+                >
                     <p className="new-task-text">Add new task</p>
                     <Add />
                 </button>

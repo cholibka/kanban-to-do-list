@@ -12,6 +12,29 @@ button {
     font-family: "Inter Tight", sans-serif;
     font-size: medium;
 }
+.input-txt {
+    width: 100%;
+    min-height: 38px;
+    border: #d3d3d3 solid 1px;
+    border-radius: 4px;
+    outline-color: #2684ff;
+    box-sizing: border-box;
+    padding: 2px 8px;
+    font: inherit;
+}
+
+label {
+    margin-bottom: 2px;
+    margin-top: 15px;
+}
+
+.input-txt::placeholder {
+    color: hsl(0, 0%, 50%);
+}
+
+label {
+    display: block;
+}
 
 /* width */
 ::-webkit-scrollbar {

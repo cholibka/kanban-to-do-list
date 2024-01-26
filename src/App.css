@@ -6,6 +6,24 @@
     flex-direction: column;
 }
 
+.modal {
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 1svw 1svh 2svw 0.5svh rgba(0, 0, 255, 0.2);
+    min-width: 30svw;
+    min-height: 40svh;
+    height: fit-content;
+    height: -moz-max-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 600px) {
+    .modal {
+        width: 70svw;
+    }
+}
+
 .list-name {
     font-size: larger;
     display: flex;
@@ -20,7 +38,6 @@
 
 .options-div {
     height: 5svh;
-    margin-top: 2svh;
     display: flex;
     justify-content: space-between;
 }
@@ -56,6 +73,9 @@
     padding-left: 3px;
 }
 
+.right-btn {
+    float: right;
+}
 .new-task-text {
     margin: 0;
     margin-right: 3px;
