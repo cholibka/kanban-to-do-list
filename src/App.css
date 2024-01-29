@@ -11,7 +11,7 @@
     border-radius: 10px;
     box-shadow: 1svw 1svh 2svw 0.5svh rgba(0, 0, 255, 0.2);
     min-width: 30svw;
-    min-height: 40svh;
+    /* min-height: 40svh; */
     height: fit-content;
     height: -moz-max-content;
     width: -moz-fit-content;
@@ -79,6 +79,7 @@
 .new-task-text {
     margin: 0;
     margin-right: 3px;
+    margin-left: 3px;
 }
 
 .date-text {

@@ -12,7 +12,7 @@ import "./App.css";
 import { ReactComponent as Left } from "./assets/chevron-left.svg";
 import { ReactComponent as Right } from "./assets/chevron-right.svg";
 import { ReactComponent as Add } from "./assets/add.svg";
-import AddTask from "./modals/AddTask";
+import UpsertTask from "./modals/UpsertTask";
 
 export default function App() {
     const [toDo, setToDo] = useState(getItems(10));
@@ -124,10 +124,13 @@ export default function App() {
     };
     return (
         <>
-            <AddTask
+            <UpsertTask
                 isOpen={isAddTaskOpen}
                 onSubmit={handleFormSubmit}
                 onClose={handleCloseAddTaskModal}
+                formData={addTaskFormData}
+                setFormData={setAddTaskFormData}
+                isNew={true}
             />
             <div className="options-div">
                 <div className="date-options">

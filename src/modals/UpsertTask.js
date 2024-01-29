@@ -5,15 +5,17 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { ReactComponent as Save } from "../assets/check.svg";
 
-export default function AddTask({ onSubmit, isOpen, onClose }) {
+export default function UpsertTask({
+    onSubmit,
+    isOpen,
+    onClose,
+    formData,
+    setFormData,
+    isNew,
+}) {
     const [selected, setSelected] = useState();
     const focusInputRef = useRef(null);
-    const [formState, setFormState] = useState({
-        name: "",
-        who: null,
-        date: null,
-    });
-
+    const formState = formData;
     useEffect(() => {
         if (isOpen && focusInputRef.current) {
             setTimeout(() => {
@@ -24,7 +26,7 @@ export default function AddTask({ onSubmit, isOpen, onClose }) {
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
-        setFormState((prevFormData) => ({
+        setFormData((prevFormData) => ({
             ...prevFormData,
             [name]: value,
         }));
@@ -32,7 +34,7 @@ export default function AddTask({ onSubmit, isOpen, onClose }) {
     const handleSubmit = (event) => {
         event.preventDefault();
         onSubmit(formState);
-        setFormState({
+        setFormData({
             name: "",
             who: null,
             date: null,
@@ -47,10 +49,15 @@ export default function AddTask({ onSubmit, isOpen, onClose }) {
 
     const chooseWeek = (week, dates) => {
         setSelected(dates);
-        setFormState((prevFormData) => ({
+        setFormData((prevFormData) => ({
             ...prevFormData,
             date: dates,
         }));
+    };
+
+    const btnString = () => {
+        if (isNew) return "Add new task";
+        else return "Edit task";
     };
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
@@ -85,7 +92,7 @@ export default function AddTask({ onSubmit, isOpen, onClose }) {
                 onClick={handleSubmit}
             >
                 <Save />
-                <p className="new-task-text">Add new task</p>
+                <p className="new-task-text">{btnString()}</p>
             </button>
         </Modal>
     );

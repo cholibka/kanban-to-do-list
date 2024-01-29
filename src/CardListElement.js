@@ -50,6 +50,7 @@ export default function CardListElement({
                                                     ? true
                                                     : false
                                             }
+                                            date=""
                                         />
                                     </div>
                                 )}
